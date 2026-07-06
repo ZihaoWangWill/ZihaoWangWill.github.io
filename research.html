@@ -1,66 +1,232 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Research | Zihao Wang</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      background-color: #fafafa;
+    }
+
+    header {
+      height: 70px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 35px;
+      font-size: 22px;
+      background-color: white;
+    }
+
+    header a {
+      text-decoration: none;
+      color: #111;
+    }
+
+    header a:hover,
+    .active {
+      color: #b23ac7;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 80px auto;
+      padding: 0 35px;
+    }
+
+    h1 {
+      font-size: 56px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 34px;
+      margin-top: 60px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    .group-link {
+      font-size: 18px;
+      margin-left: 15px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    details {
+      margin: 25px 0;
+      padding: 20px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-size: 24px;
+      font-weight: bold;
+      list-style: none;
+    }
+
+    summary::before {
+      content: "+ ";
+      color: #b23ac7;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    details[open] summary::before {
+      content: "− ";
+    }
+
+    .project-content {
+      margin-top: 20px;
+    }
+
+    .project-image {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 15px;
+      border: 1px solid #ccc;
+    }
+
+    .learn-more {
+      display: inline-block;
+      margin-top: 15px;
+      color: #b23ac7;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .note {
+      color: gray;
+      font-size: 16px;
+      font-style: italic;
+    }
+  </style>
 </head>
+
 <body>
 
   <header>
     <a href="index.html">About</a>
-    <a href="research.html">Research</a>
+    <a class="active" href="research.html">Research</a>
     <a href="repositories.html">Repositories</a>
     <a href="team.html">Team</a>
   </header>
 
-<h1>Research</h1>
+  <main>
 
-<p>
-My research focuses on computational astrophysics, numerical relativity,
-and high-performance scientific computing. I use large-scale simulations
-to study compact objects and gravitational waves.
-</p>
+    <h1>NR Research</h1>
 
+    <p>
+      buh buh buh
+    </p>
 
-<figure>
-    <img src="images/frame_03175.png" alt="Black Hole Accretion Disk">
+    <h2>
+      Shapiro Group
+      <a class="group-link" href="PASTE_SHAPIRO_GROUP_WEBSITE_HERE" target="_blank">
+        group website
+      </a>
+    </h2>
 
-    <figcaption>
-        Figure 1. GRMHD simulation of a black hole accretion disk.
-    </figcaption>
-</figure>
-  
-<hr>
+    <details>
+      <summary>Black Hole Disks</summary>
 
-<h2>Black Hole Accretion Disks</h2>
+      <div class="project-content">
+        <p>
+          Short introduction of project XXX. This project studies black hole
+          accretion disks using numerical relativity and high-performance
+          computing.
+        </p>
 
-<p>
-Black hole accretion disks are rapidly rotating disks of gas surrounding
-black holes. My work includes GRMHD simulations of accretion flows,
-magnetic field evolution, jet formation, and visualization of simulation
-results.
-</p>
+        <!-- Add your image address below in src="" -->
+        <img src="" alt="Black Hole Disks image" class="project-image">
 
-<hr>
+        <p class="note">
+          Add image path here, for example: src="images/black-hole-disk.png"
+        </p>
 
-<h2>Neutron Star Mergers</h2>
+        <a class="learn-more" href="black-hole-disks.html">learn more</a>
+      </div>
+    </details>
 
-<p>
-Binary neutron star mergers provide an important laboratory for studying
-strong-field gravity, dense nuclear matter, and multi-messenger astronomy.
-My research involves numerical relativity simulations of neutron star
-coalescence and the post-merger remnant.
-</p>
+    <details>
+      <summary>Neutron Star Merger</summary>
 
-<hr>
+      <div class="project-content">
+        <p>
+          Short introduction of project XXX. This project studies binary neutron
+          star mergers, post-merger remnants, and gravitational-wave signals.
+        </p>
 
-<h2>Gravitational Wave Memory</h2>
+        <!-- Add your image address below in src="" -->
+        <img src="" alt="Neutron Star Merger image" class="project-image">
 
-<p>
-Gravitational wave memory is a permanent displacement of spacetime after
-the passage of a gravitational wave burst. My interests include numerical
-calculations of memory effects from compact binary mergers and their
-potential observational signatures.
-</p>
+        <p class="note">
+          Add image path here, for example: src="images/neutron-star-merger.png"
+        </p>
+
+        <a class="learn-more" href="neutron-star-merger.html">learn more</a>
+      </div>
+    </details>
+
+    <h2>
+      A.T. Group
+      <a class="group-link" href="PASTE_AT_GROUP_WEBSITE_HERE" target="_blank">
+        group website
+      </a>
+    </h2>
+
+    <details>
+      <summary>Gravitational Wave Memory</summary>
+
+      <div class="project-content">
+        <p>
+          Short introduction of project XXX. This project studies gravitational
+          wave memory and its numerical or observational signatures.
+        </p>
+
+        <!-- Add your image address below in src="" -->
+        <img src="" alt="Gravitational Wave Memory image" class="project-image">
+
+        <p class="note">
+          Add image path here, for example: src="images/gravitational-wave-memory.png"
+        </p>
+
+        <a class="learn-more" href="gravitational-wave-memory.html">learn more</a>
+      </div>
+    </details>
+
+    <details>
+      <summary>XXX</summary>
+
+      <div class="project-content">
+        <p>
+          Short introduction of project XXX.
+        </p>
+
+        <!-- Add your image address below in src="" -->
+        <img src="" alt="Project image" class="project-image">
+
+        <p class="note">
+          Add image path here, for example: src="images/project-name.png"
+        </p>
+
+        <a class="learn-more" href="xxx.html">learn more</a>
+      </div>
+    </details>
+
+  </main>
 
 </body>
 </html>
