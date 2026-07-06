@@ -5,51 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zihao Wang</title>
 
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            max-width: 900px;
-            margin: 80px auto;
-            padding: 0 30px;
-            line-height: 1.7;
-            color: #333;
-            background-color: #fafafa;
-        }
+      <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+    }
 
-        h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
+    header {
+      height: 70px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 35px;
+      font-size: 22px;
+    }
 
-        h2 {
-            color: #666;
-            font-weight: normal;
-            margin-top: 0;
-        }
+    header a {
+      text-decoration: none;
+      color: #111;
+    }
 
-        p {
-            font-size: 1.15em;
-        }
+    header a:hover {
+      color: #b23ac7;
+    }
 
-        a {
-            color: #0366d6;
-            text-decoration: none;
-        }
+    .active {
+      color: #b23ac7;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    .container {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 40px;
+      display: flex;
+      gap: 80px;
+      align-items: center;
+    }
 
-        footer {
-            margin-top: 60px;
-            color: gray;
-            font-size: 0.9em;
-        }
-    </style>
+    .text {
+      flex: 2;
+    }
+
+    .text h1 {
+      font-size: 60px;
+      font-weight: 300;
+    }
+
+    .text p {
+      font-size: 24px;
+      line-height: 1.6;
+    }
+
+    .text a {
+      color: #b23ac7;
+      text-decoration: none;
+    }
+
+    .photo {
+      flex: 1;
+    }
+
+    .photo img {
+      width: 100%;
+      max-width: 320px;
+      box-shadow: 0 0 15px #aaa;
+    }
+  </style>
 </head>
 
 <body>
 
+  <header>
+    <a class="active" href="index.html">About</a>
+    <a href="research.html">Research ▾</a>
+    <a href="repositories.html">Repositories ▾</a>
+    <a href="team.html">Team</a>
+    <a href="#">🌙</a>
+  </header>
+    
 <h1>Zihao Wang</h1>
 
 <h2>Physics Undergraduate | University of Illinois Urbana-Champaign</h2>
