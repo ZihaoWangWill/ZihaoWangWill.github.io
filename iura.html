@@ -1,116 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- ================================================== -->
-    <!-- Page Information                                   -->
-    <!-- ================================================== -->
+  <meta charset="UTF-8">
+  <title>Research | Zihao Wang</title>
 
-    <meta charset="UTF-8">
-    <title>PAGE TITLE HERE</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      background-color: #fafafa;
+    }
 
-    <!-- Link to external CSS (optional) -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    header {
+      height: 70px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 35px;
+      font-size: 22px;
+      background-color: white;
+    }
 
-    <style>
+    header a {
+      text-decoration: none;
+      color: #111;
+    }
 
-        /* ==================================================
-           Page-specific CSS
-           ================================================== */
+    header a:hover,
+    .active {
+      color: #b23ac7;
+    }
 
-    </style>
+    main {
+      max-width: 1000px;
+      margin: 80px auto;
+      padding: 0 35px;
+    }
 
+    h1 {
+      font-size: 56px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 34px;
+      margin-top: 60px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    .group-link {
+      font-size: 18px;
+      margin-left: 15px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    details {
+      margin: 25px 0;
+      padding: 20px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-size: 24px;
+      font-weight: bold;
+      list-style: none;
+    }
+
+    summary::before {
+      content: "+ ";
+      color: #b23ac7;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    details[open] summary::before {
+      content: "− ";
+    }
+
+    .project-content {
+      margin-top: 20px;
+    }
+
+    .project-image {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 15px;
+      border: 1px solid #ccc;
+    }
+
+    .learn-more {
+      display: inline-block;
+      margin-top: 15px;
+      color: #b23ac7;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .note {
+      color: gray;
+      font-size: 16px;
+      font-style: italic;
+    }
+
+    .office-card{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:30px;
+    margin-top:25px;
+    background:white;
+    transition:0.2s;
+}
+
+.office-card:hover{
+    box-shadow:0 5px 15px rgba(0,0,0,0.12);
+    transform:translateY(-3px);
+}
+
+.office-content{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.office-image{
+    width:180px;
+    height:180px;
+    border:1px dashed #bbb;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+    margin-top:30px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:8px;
+}
+
+.gallery figcaption{
+    text-align:center;
+    margin-top:10px;
+}
+      
+  </style>
 </head>
 
 <body>
 
-    <!-- ================================================== -->
-    <!-- Navigation Bar                                     -->
-    <!-- ================================================== -->
+  <header>
+    <a href="index.html">About</a>
+    <a class="active" href="research.html">Research</a>
+    <a href="repositories.html">Repositories</a>
+    <a href="team.html">Team</a>
+  </header>
 
-    <!-- Copy your navigation bar here -->
+  <main>
 
+    <h1>Illinois Undergraduate Research Ambassador</h1>
 
+<p>
+As an Illinois Undergraduate Research Ambassador, I work with the Office
+of Undergraduate Research to promote undergraduate research opportunities,
+mentor students interested in research, and assist with outreach events
+across campus.
+</p>
 
-    <!-- ================================================== -->
-    <!-- Page Header                                        -->
-    <!-- ================================================== -->
+<h2>Office of Undergraduate Research</h2>
 
-    <h1>PAGE TITLE</h1>
+<a class="office-card"
+   href="https://undergradresearch.illinois.edu/"
+   target="_blank">
 
-    <p>
-        Short introduction goes here.
-    </p>
+    <div class="office-content">
 
-
-
-    <!-- ================================================== -->
-    <!-- Section 1                                          -->
-    <!-- ================================================== -->
-
-    <h2>SECTION TITLE</h2>
-
-    <p>
-        Section description...
-    </p>
-
-
-
-    <!-- ================================================== -->
-    <!-- Expandable Project                                 -->
-    <!-- ================================================== -->
-
-    <details>
-
-        <summary>PROJECT NAME</summary>
+        <!-- Replace with office logo -->
+        <img src="" class="office-image">
 
         <div>
 
+            <h3>Illinois Office of Undergraduate Research</h3>
+
             <p>
-                Project description goes here.
+                Visit our office website to explore research opportunities,
+                funding programs, workshops, and student resources.
             </p>
 
-            <!-- Add image here -->
-            <img src="" alt="Project Image">
-
-            <!-- TODO:
-                 Replace src="" with:
-                 images/project.png
-            -->
-
-            <br><br>
-
-            <a href="">
-                Learn More
-            </a>
-
-            <!-- TODO:
-                 Replace href="" with:
-                 project.html
-            -->
+            <p><strong>Learn More →</strong></p>
 
         </div>
 
-    </details>
+    </div>
 
+</a>
 
+<h2>Activities</h2>
 
-    <!-- ================================================== -->
-    <!-- Another Section                                    -->
-    <!-- ================================================== -->
+<div class="gallery">
 
+    <!-- Activity 1 -->
+    <figure>
 
+        <img src="">
 
-    <!-- ================================================== -->
-    <!-- Footer                                             -->
-    <!-- ================================================== -->
+        <figcaption>
+            Activity caption.
+        </figcaption>
 
-    <footer>
+    </figure>
 
-        © 2026 Zihao Wang
+    <!-- Activity 2 -->
+    <figure>
 
-    </footer>
+        <img src="">
+
+        <figcaption>
+            Activity caption.
+        </figcaption>
+
+    </figure>
+
+    <!-- Activity 3 -->
+    <figure>
+
+        <img src="">
+
+        <figcaption>
+            Activity caption.
+        </figcaption>
+
+    </figure>
+
+    <!-- Activity 4 -->
+    <figure>
+
+        <img src="">
+
+        <figcaption>
+            Activity caption.
+        </figcaption>
+
+    </figure>
+
+</div>
+
+  </main>
 
 </body>
-
 </html>
