@@ -1,116 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- ================================================== -->
-    <!-- Page Information                                   -->
-    <!-- ================================================== -->
+  <meta charset="UTF-8">
+  <title>Research | Zihao Wang</title>
 
-    <meta charset="UTF-8">
-    <title>PAGE TITLE HERE</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      background-color: #fafafa;
+    }
 
-    <!-- Link to external CSS (optional) -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    header {
+      height: 70px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 35px;
+      font-size: 22px;
+      background-color: white;
+    }
 
-    <style>
+    header a {
+      text-decoration: none;
+      color: #111;
+    }
 
-        /* ==================================================
-           Page-specific CSS
-           ================================================== */
+    header a:hover,
+    .active {
+      color: #b23ac7;
+    }
 
-    </style>
+    main {
+      max-width: 1000px;
+      margin: 80px auto;
+      padding: 0 35px;
+    }
 
+    h1 {
+      font-size: 56px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 34px;
+      margin-top: 60px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    .group-link {
+      font-size: 18px;
+      margin-left: 15px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    details {
+      margin: 25px 0;
+      padding: 20px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-size: 24px;
+      font-weight: bold;
+      list-style: none;
+    }
+
+    summary::before {
+      content: "+ ";
+      color: #b23ac7;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    details[open] summary::before {
+      content: "− ";
+    }
+
+    .project-content {
+      margin-top: 20px;
+    }
+
+    .project-image {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 15px;
+      border: 1px solid #ccc;
+    }
+
+    .learn-more {
+      display: inline-block;
+      margin-top: 15px;
+      color: #b23ac7;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .note {
+      color: gray;
+      font-size: 16px;
+      font-style: italic;
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- ================================================== -->
-    <!-- Navigation Bar                                     -->
-    <!-- ================================================== -->
+  <header>
+    <a href="index.html">About</a>
+    <a class="active" href="research.html">Research</a>
+    <a href="repositories.html">Repositories</a>
+    <a href="team.html">Team</a>
+  </header>
 
-    <!-- Copy your navigation bar here -->
+  <main>
 
-
-
-    <!-- ================================================== -->
-    <!-- Page Header                                        -->
-    <!-- ================================================== -->
-
-    <h1>PAGE TITLE</h1>
+    <h1>NR Research</h1>
 
     <p>
-        Short introduction goes here.
+      buh buh buh
     </p>
 
-
-
-    <!-- ================================================== -->
-    <!-- Section 1                                          -->
-    <!-- ================================================== -->
-
-    <h2>SECTION TITLE</h2>
-
-    <p>
-        Section description...
-    </p>
-
-
-
-    <!-- ================================================== -->
-    <!-- Expandable Project                                 -->
-    <!-- ================================================== -->
+    <h2>
+      Shapiro Group
+      <a class="group-link" href="https://research.physics.illinois.edu/CTA/IRG/members.html" target="_blank">
+        group website
+      </a>
+    </h2>
 
     <details>
+      <summary>The Gravitational Wave Memory from Binary Neutron Star Mergers</summary>
 
-        <summary>PROJECT NAME</summary>
+      <div class="project-content">
+        <p>
+          The gravitational wave signal produced by the merger of two compact objects includes both an oscillatory transient and a non-oscillatory part, 
+          the so-called memory effect. This produces a permanent displacement of test masses and has not yet been measured.
+        </p>
 
-        <div>
+        <!-- Add your image address below in src="" -->
+        <img src="" alt="Black Hole Disks image" class="project-image">
 
-            <p>
-                Project description goes here.
-            </p>
+        <p class="note">
+          Add image path here, for example: src="images/black-hole-disk.png"
+        </p>
 
-            <!-- Add image here -->
-            <img src="" alt="Project Image">
-
-            <!-- TODO:
-                 Replace src="" with:
-                 images/project.png
-            -->
-
-            <br><br>
-
-            <a href="">
-                Learn More
-            </a>
-
-            <!-- TODO:
-                 Replace href="" with:
-                 project.html
-            -->
-
-        </div>
-
+        <a class="learn-more" href="gravitational-wave-memory.html">learn more</a>
+      </div>
     </details>
 
+    <details>
+      <summary>Neutron Star Merger</summary>
 
+      <div class="project-content">
+        <p>
+          Short introduction of project XXX. This project studies binary neutron
+          star mergers, post-merger remnants, and gravitational-wave signals.
+        </p>
 
-    <!-- ================================================== -->
-    <!-- Another Section                                    -->
-    <!-- ================================================== -->
+        <!-- Add your image address below in src="" -->
+        <img src="" alt="Neutron Star Merger image" class="project-image">
 
+        <p class="note">
+          Add image path here, for example: src="images/neutron-star-merger.png"
+        </p>
 
+        <a class="learn-more" href="neutron-star-merger.html">learn more</a>
+      </div>
+    </details>
 
-    <!-- ================================================== -->
-    <!-- Footer                                             -->
-    <!-- ================================================== -->
+    <h2>
+      Tsokaros Group
+      <a class="group-link" href="https://tsokaros.github.io/team/" target="_blank">
+        group website
+      </a>
+    </h2>
 
-    <footer>
+    <details>
+      <summary>Gravitational Wave Memory</summary>
 
-        © 2026 Zihao Wang
+      <div class="project-content">
+        <p>
+          Short introduction of project XXX. This project studies gravitational
+          wave memory and its numerical or observational signatures.
+        </p>
 
-    </footer>
+        <!-- Add your image address below in src="" -->
+        <img src="" alt="Gravitational Wave Memory image" class="project-image">
+
+        <p class="note">
+          Add image path here, for example: src="images/gravitational-wave-memory.png"
+        </p>
+
+        <a class="learn-more" href="gravitational-wave-memory.html">learn more</a>
+      </div>
+    </details>
+
+    <details>
+      <summary>XXX</summary>
+
+      <div class="project-content">
+        <p>
+          Short introduction of project XXX.
+        </p>
+
+        <!-- Add your image address below in src="" -->
+        <img src="" alt="Project image" class="project-image">
+
+        <p class="note">
+          Add image path here, for example: src="images/project-name.png"
+        </p>
+
+        <a class="learn-more" href="xxx.html">learn more</a>
+      </div>
+    </details>
+
+  </main>
 
 </body>
-
 </html>
