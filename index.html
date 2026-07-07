@@ -72,6 +72,57 @@
       max-width: 320px;
       box-shadow: 0 0 15px #aaa;
     }
+
+    .section-grid {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.section-card {
+  text-decoration: none;
+  color: #111;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px #ddd;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: white;
+}
+
+.section-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px #aaa;
+}
+
+.section-title {
+  padding: 20px;
+  font-size: 22px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.section-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Makes boxes stack on small screens */
+@media (max-width: 900px) {
+  .section-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .section-grid {
+    grid-template-columns: 1fr;
+  }
+}
+          
   </style>
 </head>
 
@@ -101,6 +152,54 @@ high-performance scientific computing, and gravitational wave physics.
 This website contains information about my research, projects,
 publications, and academic activities.
 </p>
+
+<!-- ===================== SECTION BOXES ===================== -->
+<!-- Put this below your name, introduction, and profile picture -->
+
+<section class="section-grid">
+
+  <!-- Box 1: Numerical Relativity Research -->
+  <a class="section-card" href="research.html">
+    <div class="section-title">
+      Numerical Relativity Research
+    </div>
+
+    <!-- NOTE: Replace src with your image path, for example:
+         images/numerical-relativity.jpg -->
+    <img src="images/ADD_NR_IMAGE_HERE.jpg" alt="Numerical relativity research image">
+  </a>
+
+  <!-- Box 2: Machine Projects -->
+  <a class="section-card" href="repositories.html">
+    <div class="section-title">
+      Machine Projects
+    </div>
+
+    <!-- NOTE: Replace src with your project image path -->
+    <img src="images/ADD_MACHINE_PROJECT_IMAGE_HERE.jpg" alt="Machine projects image">
+  </a>
+
+  <!-- Box 3: Research Ambassador -->
+  <a class="section-card" href="team.html">
+    <div class="section-title">
+      Research Ambassador
+    </div>
+
+    <!-- NOTE: Replace src with your IURA / ambassador image path -->
+    <img src="images/ADD_RESEARCH_AMBASSADOR_IMAGE_HERE.jpg" alt="Research Ambassador image">
+  </a>
+
+  <!-- Box 4: Activity & Honors -->
+  <a class="section-card" href="honors.html">
+    <div class="section-title">
+      Activity & Honors
+    </div>
+
+    <!-- NOTE: Replace src with your activity or honors image path -->
+    <img src="images/ADD_ACTIVITY_HONORS_IMAGE_HERE.jpg" alt="Activity and Honors image">
+  </a>
+
+</section>
 
 <footer>
 © 2026 Zihao Wang
