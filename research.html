@@ -114,6 +114,25 @@ details {
       font-size: 16px;
       font-style: italic;
     }
+
+  .poster-preview {
+  width: 100%;
+  max-width: 720px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  cursor: pointer;
+}
+
+.project-movie {
+  width: 100%;
+  max-width: 720px;
+  margin-top: 25px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+    
   </style>
 </head>
 
@@ -142,24 +161,41 @@ details {
       </a>
     </h2>
 
-    <details>
-      <summary>The Gravitational Wave Memory from Binary Neutron Star Mergers</summary>
+<details>
+  <summary>The Gravitational Wave Memory from Binary Neutron Star Mergers</summary>
 
-      <div class="project-content">
-        <p>
-          The gravitational wave signal produced by the merger of two compact objects includes both an oscillatory transient and a non-oscillatory part, 
-          the so-called memory effect. This produces a permanent displacement of test masses and has not yet been measured.
-        </p>
+  <div class="project-content">
 
-        <!-- Add your image address below in src="" -->
-        <img src="" alt="Black Hole Disks image" class="project-image">
+    <p>
+      The gravitational wave signal produced by the merger of two compact objects
+      includes both an oscillatory transient and a non-oscillatory part, the so-called
+      memory effect. This produces a permanent displacement of test masses and has
+      not yet been measured.
+    </p>
 
-        <p class="note">
-          Add image path here, for example: src="images/black-hole-disk.png"
-        </p>
+    <!-- Poster preview.
+         Put a PNG/JPG preview of your LaTeX poster here.
+         Clicking the preview opens the full PDF. -->
+    <a href="posters/gw-memory-poster.pdf" target="_blank">
+      <img
+        src="images/gw-memory-poster-preview.png"
+        alt="Poster preview for gravitational wave memory project"
+        class="poster-preview">
+    </a>
 
-      </div>
-    </details>
+    <p class="note">
+      Click the poster preview to open the full PDF.
+    </p>
+
+    <!-- Movie.
+         Use .mp4 for best browser compatibility. -->
+    <video class="project-movie" controls>
+      <source src="movies/gw-memory-movie.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+  </div>
+</details>
 
     <details>
       <summary>Neutron Star Merger</summary>
