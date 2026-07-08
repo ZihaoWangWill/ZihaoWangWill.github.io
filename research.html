@@ -132,6 +132,21 @@ details {
   border-radius: 6px;
   border: 1px solid #ccc;
 }
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    aspect-ratio: 16 / 9;
+    margin-top: 20px;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
     
   </style>
 </head>
@@ -187,12 +202,15 @@ details {
       Click the poster preview to open the full PDF.
     </p>
 
-    <!-- Movie.
-         Use .mp4 for best browser compatibility. -->
-    <video class="project-movie" controls>
-      <source src="movies/gw-memory-movie.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <h3>Project Video</h3>
+
+<div class="video-container">
+    <iframe
+        src="https://www.youtube.com/embed/4GcjdiJn8k4"
+        title="Project Video"
+        allowfullscreen>
+    </iframe>
+</div>
 
   </div>
 </details>
