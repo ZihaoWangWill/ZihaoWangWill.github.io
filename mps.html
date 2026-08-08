@@ -147,6 +147,91 @@ details {
     border: none;
     border-radius: 8px;
 }
+/* ===== Android App Showcase ===== */
+
+.app-showcase {
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+/* App icon at top */
+.app-icon {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 28px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+
+.image-caption {
+    font-size: 22px;
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+
+/* Description area */
+.app-description {
+    max-width: 850px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+
+/* Screenshot gallery */
+.screenshot-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin: 35px 0;
+    flex-wrap: wrap;
+}
+
+
+.screenshot-item {
+    text-align: center;
+}
+
+
+.screenshot-item img {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
+
+
+.screenshot-caption {
+    margin-top: 10px;
+    color: gray;
+    font-size: 16px;
+}
+
+
+/* Robustness section */
+.robust-section {
+    margin-top: 45px;
+    padding: 25px 30px;
+    background: #f6f8fb;
+    border-left: 4px solid #0B3D91;
+    border-radius: 6px;
+}
+
+
+.robust-section h4 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+
+.robust-section li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
     
   </style>
 </head>
@@ -266,18 +351,93 @@ Produced a fluid dynamics simulation.
     </h2>
 
     <details>
-      <summary>Robust Rating Apps</summary>
+<summary>Rate UIUC Courses</summary>
 
-  <div class="project-content">
+<div class="project-content">
 
-    <h4>Methods</h4>
-    <p>
-Built a rating application in Android.
+    <div class="app-showcase">
 
-    </p>
+        <img src="images/rate-uiuc-icon.png"
+             class="app-icon"
+             alt="Rate UIUC Courses Icon">
 
-  </div>
-    </details>
+        <div class="image-caption">
+            Rate UIUC Courses
+        </div>
+
+    </div>
+
+
+    <div class="app-description">
+
+        <p>
+            Rate UIUC Courses is an Android application that allows students
+            to explore, review, and evaluate UIUC courses through an intuitive
+            mobile interface.
+        </p>
+
+    </div>
+
+
+    <div class="screenshot-gallery">
+
+        <div class="screenshot-item">
+            <img src="images/rate-screen1.png">
+            <div class="screenshot-caption">
+                Course rating interface
+            </div>
+        </div>
+
+
+        <div class="screenshot-item">
+            <img src="images/rate-screen2.png">
+            <div class="screenshot-caption">
+                Course details and feedback view
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="robust-section">
+
+        <h4>Robust & Parallel Application Design</h4>
+
+        <p>
+            The application was engineered with reliability and performance
+            as key design goals.
+        </p>
+
+        <ul>
+            <li>
+                <strong>Modular architecture:</strong>
+                separated UI components, data management, and application logic.
+            </li>
+
+            <li>
+                <strong>Robust error handling:</strong>
+                prevented crashes caused by invalid input and unexpected states.
+            </li>
+
+            <li>
+                <strong>Parallel execution:</strong>
+                used asynchronous tasks to keep intensive operations away from
+                the main UI thread.
+            </li>
+
+            <li>
+                <strong>Performance optimization:</strong>
+                improved responsiveness and reduced unnecessary computation.
+            </li>
+        </ul>
+
+    </div>
+
+
+</div>
+
+</details>
     
   </main>
 
