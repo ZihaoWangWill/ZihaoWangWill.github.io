@@ -273,9 +273,16 @@ details {
   <div class="project-content">
 
     <p>
-      Implemented the ChaCha20 encryption algorithm for secure data protection. 
-      Enhanced security by integrating a randomization function to strengthen encryption robustness. 
-      Optimized performance by testing with large datasets, refining efficiency and scalability.
+This project implements a file encryption and decryption program based on the ChaCha20 stream cipher, 
+      written entirely in Rust. Inspired by real-world cybersecurity applications, 
+      the program simulates a secure communication system where sensitive information is encrypted before transmission and later decrypted by an authorized receiver without any loss of data.
+The goal of this project is to develop a functional ChaCha20 encryption system capable of reading files, 
+      transforming plaintext data into secure ciphertext, and accurately recovering the original information through decryption.
+ChaCha20 was selected because of its combination of security, efficiency, and flexibility. 
+      Unlike traditional block-based encryption methods, ChaCha20 operates as a stream cipher, 
+      allowing it to efficiently encrypt data of arbitrary length. 
+      Its core design, based on repeated mathematical transformations using addition, XOR operations, and bit rotations, 
+      demonstrates how simple operations can be combined to create strong cryptographic security.
 
     </p>
 
