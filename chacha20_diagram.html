@@ -1,181 +1,218 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <style>
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #ffffff;
-    color: #222;
+    color: #1b1f23;
 }
 
+
 .diagram {
-    max-width: 1200px;
-    margin: 40px auto;
+    max-width: 650px;
+    margin: 50px auto;
     text-align: center;
 }
+
 
 .title {
     font-size: 32px;
     font-weight: 600;
-    margin-bottom: 10px;
+    color: #12355b;
+    margin-bottom: 8px;
 }
+
 
 .subtitle {
     color: #666;
+    font-size: 16px;
     margin-bottom: 40px;
 }
 
 
+
 .flow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 
 .box {
-    width: 180px;
-    min-height: 150px;
-    border-radius: 15px;
-    padding: 20px;
-    box-sizing: border-box;
-    border: 2px solid #1f4e79;
-    background: #eef5fb;
+
+    width:420px;
+    padding:25px;
+
+    background:#f5f8fc;
+
+    border:2px solid #12355b;
+
+    border-radius:14px;
+
+    margin:10px;
+
+    box-sizing:border-box;
+
 }
 
 
-.algorithm {
-    width: 250px;
-    background: #f7f2e8;
-    border-color: #c77d00;
+.box h3 {
+
+    margin:0 0 12px 0;
+
+    color:#12355b;
+
+    font-size:21px;
+
 }
 
 
-.output {
-    background: #eaf7ea;
-    border-color: #2e7d32;
+.box p {
+
+    margin:0;
+
+    line-height:1.6;
+
+    font-size:15px;
+
+    color:#333;
+
 }
 
-
-h3 {
-    margin-top: 0;
-    font-size: 18px;
-}
-
-
-p {
-    font-size: 14px;
-    line-height: 1.5;
-}
 
 
 .arrow {
-    font-size: 35px;
-    color: #555;
+
+    font-size:36px;
+
+    color:#12355b;
+
+    height:45px;
+
 }
 
 
+
 .matrix {
-    display: grid;
-    grid-template-columns: repeat(4, 35px);
-    justify-content: center;
-    margin: 15px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,45px);
+
+    justify-content:center;
+
+    margin:20px auto;
+
 }
 
 
 .cell {
-    border: 1px solid #777;
-    padding: 8px 0;
-    font-size: 12px;
+
+    border:1px solid #12355b;
+
     background:white;
+
+    padding:12px 0;
+
+    font-size:13px;
+
 }
 
 
-.round {
-    margin-top:20px;
-    padding:15px;
-    border-radius:10px;
-    background:#fff;
-    border:1px solid #bbb;
+
+.highlight {
+
+    background:#e8f0fa;
+
 }
+
 
 
 .footer {
-    margin-top:40px;
+
+    margin-top:30px;
+
     padding:20px;
-    background:#f5f5f5;
+
+    background:#f5f8fc;
+
     border-radius:12px;
+
+    border:1px solid #12355b;
+
     font-size:14px;
+
 }
 
-@media(max-width:800px){
-    .arrow {
-        transform: rotate(90deg);
-    }
-}
 
 </style>
+
 </head>
 
 
 <body>
 
+
 <div class="diagram">
 
+
 <div class="title">
-Rust-Based ChaCha20 File Encryption System
+Rust-Based ChaCha20 Encryption System
 </div>
 
+
 <div class="subtitle">
-Secure file encryption using ChaCha20 stream cipher architecture
+Secure file encryption using a stream cipher architecture
 </div>
+
 
 
 <div class="flow">
 
 
+
 <div class="box">
-<h3>📄 Plaintext File</h3>
+
+<h3>1. Input File</h3>
 
 <p>
-Input data file
-<br><br>
-secret.txt
-<br>
-01001001...
+Plaintext data file<br>
+Example: secret.txt
 </p>
 
 </div>
 
 
 <div class="arrow">
-→
+↓
 </div>
 
 
-<div class="box algorithm">
 
-<h3>🔑 Initialization</h3>
+<div class="box">
+
+<h3>2. ChaCha20 Initialization</h3>
 
 <p>
-Generate:
-<br>
-256-bit Key
-<br>
-96-bit Nonce
-<br>
-Counter
+Generate encryption parameters:
+<br><br>
+
+256-bit Key<br>
+96-bit Nonce<br>
+Initial Counter
+
 </p>
 
 
 <div class="matrix">
 
-<div class="cell">C</div>
-<div class="cell">C</div>
-<div class="cell">C</div>
-<div class="cell">C</div>
+<div class="cell highlight">C</div>
+<div class="cell highlight">C</div>
+<div class="cell highlight">C</div>
+<div class="cell highlight">C</div>
 
 <div class="cell">K</div>
 <div class="cell">K</div>
@@ -187,129 +224,172 @@ Counter
 <div class="cell">K</div>
 <div class="cell">K</div>
 
-<div class="cell">N</div>
-<div class="cell">N</div>
-<div class="cell">N</div>
+<div class="cell highlight">N</div>
+<div class="cell highlight">N</div>
+<div class="cell highlight">N</div>
 <div class="cell">CTR</div>
 
 </div>
 
+
 <p>
-4×4 State Matrix
-(16 × 32-bit words)
+4 × 4 State Matrix<br>
+16 × 32-bit words
 </p>
 
+
 </div>
+
 
 
 <div class="arrow">
-→
+↓
 </div>
 
 
 
-<div class="box algorithm">
+<div class="box">
 
-<h3>⚙ ChaCha20 Core</h3>
-
-
-<div class="round">
-
-<b>Quarter Round</b>
+<h3>3. Quarter Round Transformation</h3>
 
 <p>
-ADD
+
+Four 32-bit words are mixed using:
+
+<br><br>
+
+Addition (+)
 <br>
-XOR
+XOR (⊕)
 <br>
-ROTATE
+Bit Rotation (<<<)
+
+<br><br>
+
+Creates diffusion by spreading input changes.
+
 </p>
 
 </div>
 
 
-<div class="round">
 
-<b>20 Rounds</b>
+<div class="arrow">
+↓
+</div>
+
+
+
+<div class="box">
+
+<h3>4. ChaCha20 Block Function</h3>
 
 <p>
+
+20 rounds of transformation:
+
+<br><br>
+
 10 Column Rounds
 <br>
 10 Diagonal Rounds
-</p>
 
-</div>
-
-
-</div>
-
-
-
-<div class="arrow">
-→
-</div>
-
-
-
-<div class="box algorithm">
-
-<h3>🌊 Keystream</h3>
-
-<p>
-Block Function
 <br><br>
 
-64-byte
-pseudo-random
-keystream
+Produces a randomized internal state.
 
 </p>
 
 </div>
 
 
+
 <div class="arrow">
-→
+↓
 </div>
 
 
-<div class="box algorithm">
 
-<h3>🔒 XOR Encryption</h3>
+
+<div class="box">
+
+<h3>5. Keystream Generation</h3>
+
+<p>
+
+Final state + Original state
+
+<br><br>
+
+Produces:
+
+<br>
+
+64-byte pseudorandom keystream block
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="arrow">
+↓
+</div>
+
+
+
+<div class="box">
+
+<h3>6. XOR Encryption</h3>
 
 <p>
 
 Plaintext
+
 <br>
+
 ⊕
 
 <br>
+
 Keystream
 
 <br><br>
 
 =
+
+<br>
+
 Ciphertext
 
 </p>
 
+
 </div>
+
 
 
 <div class="arrow">
-→
+↓
 </div>
 
 
 
-<div class="box output">
+<div class="box">
 
-<h3>📦 Encrypted File</h3>
+<h3>7. Encrypted Output</h3>
 
 <p>
-Ciphertext output
-<br><br>
-secure.dat
+
+Encrypted file stored securely
+
+<br>
+
+Example: encrypted.dat
+
 </p>
 
 </div>
@@ -318,20 +398,20 @@ secure.dat
 </div>
 
 
+
 <div class="footer">
 
-<b>Implementation:</b>
-Rust Language |
-Memory-safe design |
-File encryption/decryption |
-Random key generation |
-Arbitrary file size support
+<b>Implementation:</b><br>
+
+Rust Language · Memory-safe implementation · File encryption/decryption · Random key generation
 
 </div>
+
 
 
 </div>
 
 
 </body>
+
 </html>
