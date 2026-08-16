@@ -6,33 +6,29 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background:white;
-    color:#222;
+    background: white;
+    color: #222;
 }
 
 
 .container {
-
-    width:1000px;
-    margin:40px auto;
-    text-align:center;
-
+    width: 950px;
+    margin: 40px auto;
+    text-align: center;
 }
 
 
-h1 {
-
-    color:#12355B;
-    font-size:32px;
-
+.title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #12355B;
 }
 
 
 .subtitle {
-
+    margin-top:10px;
+    margin-bottom:35px;
     color:#666;
-    margin-bottom:30px;
-
 }
 
 
@@ -40,9 +36,10 @@ h1 {
 .diagram {
 
     display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap:35px;
-    align-items:center;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
 
 }
 
@@ -51,43 +48,50 @@ h1 {
 .column {
 
     display:flex;
+
     flex-direction:column;
+
     align-items:center;
 
 }
 
 
 
-.node {
+.block {
 
     width:330px;
+
+    min-height:120px;
 
     padding:18px;
 
     margin:10px;
 
-    border-radius:14px;
+    box-sizing:border-box;
+
+    background:#F5F8FC;
 
     border:2px solid #12355B;
 
-    background:#F5F8FC;
+    border-radius:10px;
 
 }
 
 
 
-.node h3 {
-
-    color:#12355B;
+.block h3 {
 
     margin:0 0 10px;
+
+    color:#12355B;
 
     font-size:18px;
 
 }
 
 
-.node p {
+
+.block p {
 
     margin:0;
 
@@ -109,78 +113,12 @@ h1 {
 
 
 
-.hex {
-
-    width:300px;
-
-    padding:20px;
-
-    background:#F5F8FC;
-
-    border:2px solid #12355B;
-
-    clip-path:polygon(
-    10% 0,
-    90% 0,
-    100% 50%,
-    90% 100%,
-    10% 100%,
-    0 50%
-    );
-
-}
-
-
-
-.matrix {
-
-    display:grid;
-
-    grid-template-columns:repeat(4,30px);
-
-    justify-content:center;
-
-    margin:12px;
-
-}
-
-
-.cell {
-
-    border:1px solid #12355B;
-
-    background:white;
-
-    padding:5px;
-
-    font-size:11px;
-
-}
-
-
 .output {
 
-    background:#EAF5EA;
+    background:#EEF6EE;
 
 }
 
-
-
-.footer {
-
-    margin-top:30px;
-
-    padding:15px;
-
-    border-radius:10px;
-
-    background:#F5F8FC;
-
-    border:1px solid #12355B;
-
-    font-size:14px;
-
-}
 
 
 </style>
@@ -195,12 +133,13 @@ h1 {
 <div class="container">
 
 
-<h1>
+<div class="title">
 Rust-Based ChaCha20 Encryption System
-</h1>
+</div>
+
 
 <div class="subtitle">
-Secure file encryption using ChaCha20 stream cipher
+Secure file encryption using ChaCha20 stream cipher architecture
 </div>
 
 
@@ -209,115 +148,88 @@ Secure file encryption using ChaCha20 stream cipher
 
 
 
-<!-- LEFT COLUMN -->
+<!-- LEFT SIDE -->
 
 <div class="column">
 
 
-<div class="node">
+<div class="block">
 
 <h3>1. Plaintext File</h3>
 
 <p>
 Input data file
-<br>
+<br><br>
 secret.txt
 </p>
 
 </div>
 
 
-<div class="arrow">
-↓
-</div>
+<div class="arrow">↓</div>
 
 
 
-<div class="node">
+<div class="block">
 
 <h3>2. ChaCha20 Initialization</h3>
 
 <p>
 
-256-bit Key
+256-bit Key<br>
+96-bit Nonce<br>
+Counter<br>
 <br>
-96-bit Nonce
-<br>
-Counter
 
-</p>
+4 × 4 State Matrix
 
-
-<div class="matrix">
-
-<div class="cell">C</div>
-<div class="cell">C</div>
-<div class="cell">C</div>
-<div class="cell">C</div>
-
-<div class="cell">K</div>
-<div class="cell">K</div>
-<div class="cell">K</div>
-<div class="cell">K</div>
-
-<div class="cell">K</div>
-<div class="cell">K</div>
-<div class="cell">K</div>
-<div class="cell">K</div>
-
-<div class="cell">N</div>
-<div class="cell">N</div>
-<div class="cell">N</div>
-<div class="cell">CTR</div>
-
-</div>
-
-
-<p>
-4×4 State Matrix
 </p>
 
 </div>
 
 
 
-<div class="arrow">
-↓
-</div>
+<div class="arrow">↓</div>
 
 
 
-<div class="hex">
+<div class="block">
 
-<h3>3. Quarter Round</h3>
+<h3>3. Quarter Round Transformation</h3>
 
 <p>
+
 ADD<br>
 XOR<br>
 ROTATE
+
+<br><br>
+
+Creates diffusion by mixing
+32-bit words
+
 </p>
 
 </div>
 
 
 
-<div class="arrow">
-↓
-</div>
+<div class="arrow">↓</div>
 
 
 
-<div class="node">
+<div class="block">
 
 <h3>4. Block Function</h3>
 
 <p>
 
-20 rounds
+20 Transformation Rounds
 
-<br>
+<br><br>
 
-10 Column + 10 Diagonal
+10 Column Rounds<br>
+10 Diagonal Rounds
 
 </p>
 
@@ -330,22 +242,22 @@ ROTATE
 
 
 
-<!-- RIGHT COLUMN -->
-
+<!-- RIGHT SIDE -->
 
 <div class="column">
 
 
 
-<div class="node">
+<div class="block">
 
 <h3>5. Keystream Generation</h3>
 
 <p>
 
-Produces 64-byte
+Generate 64-byte
 <br>
-pseudorandom stream
+
+pseudorandom keystream
 
 </p>
 
@@ -353,13 +265,11 @@ pseudorandom stream
 
 
 
-<div class="arrow">
-↓
-</div>
+<div class="arrow">↓</div>
 
 
 
-<div class="hex">
+<div class="block">
 
 <h3>6. XOR Encryption</h3>
 
@@ -375,54 +285,32 @@ Plaintext
 
 Keystream
 
+<br><br>
+
+Produces ciphertext
+
 </p>
 
 </div>
 
 
 
-<div class="arrow">
-↓
-</div>
+<div class="arrow">↓</div>
 
 
 
-<div class="node output">
+<div class="block output">
 
 <h3>7. Encrypted File</h3>
 
 <p>
 
+Secure ciphertext output
+
+<br><br>
+
 ciphertext.dat
 
-<br>
-
-Secure Output
-
-</p>
-
-</div>
-
-
-
-<div style="height:80px"></div>
-
-
-
-<div class="node">
-
-<h3>Rust Implementation</h3>
-
-<p>
-
-Memory-safe design
-<br>
-File processing
-<br>
-Encryption / Decryption
-<br>
-Random key generation
-
 </p>
 
 </div>
@@ -431,14 +319,6 @@ Random key generation
 
 </div>
 
-
-</div>
-
-
-
-<div class="footer">
-
-ChaCha20 Stream Cipher | 256-bit Key | 96-bit Nonce | Rust Implementation
 
 </div>
 
