@@ -303,27 +303,45 @@ details {
 <details>
   <summary>Galaxy Classification</summary>
   <div class="project-content">
-    <p class="note">Project details coming soon.</p>
+    <p>
+      Implemented a neural network in Python and JAX to classify Sloan Digital
+      Sky Survey images using Galaxy Zoo morphological labels. Trained the
+      model using stochastic gradient descent, with automatic differentiation
+      for gradient computation and just-in-time compilation to accelerate
+      execution. Achieved 71% classification accuracy.
+    </p>
+
+    <img src="images/mps/mp_GC_type.png"
+         alt="Ten galaxy morphology classes"
+         class="poster-preview">
+    <p>Examples of the ten galaxy morphology classes used for classification.</p>
   </div>
 </details>
 
 <details>
-      <summary>Fluid Dynamics</summary>
+  <summary>Fluid Dynamics</summary>
 
   <div class="project-content">
-
     <h4>Methods</h4>
     <p>
-Produced a fluid dynamics simulation. 
-      The simulation is based on the lattice Boltzmann method. 
-      Simulate the microscopic behavior of the fluid using a 9-component model on a grid. 
-      Each of the 9 components represents a density of fluid moving in a different direction: stationary, up, down, left, right, and each of the diagonal directions. 
-      Propagation forward in time consists of three main steps
-
+      Developed a fluid dynamics simulation using the lattice Boltzmann method.
+      Represented the fluid on a two-dimensional grid with nine components:
+      one stationary, four along the coordinate axes, and four along the
+      diagonals. Evolved the flow through collision, streaming, and
+      boundary-condition updates.
     </p>
 
+    <img src="images/mps/mp_FD_ball.png"
+         alt="Simulation of fluid flow around a circular obstacle"
+         class="poster-preview">
+    <p>Fluid flow around a circular obstacle.</p>
+
+    <img src="images/mps/mp_FD_2wall.png"
+         alt="Simulation of fluid flow past two walls"
+         class="poster-preview">
+    <p>Fluid flow past two walls, illustrating the effect of boundaries on the flow.</p>
   </div>
-    </details>
+</details>
 
     <h2>Machine Learning</h2>
 
